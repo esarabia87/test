@@ -1,0 +1,25 @@
+﻿@model IEnumerable<FiltroItemViewModel>
+
+<div style="padding: 15px;">
+    <div style="background-color: rgb(130, 81, 177); 
+        padding-top:10px; padding-bottom: 10px; color:white; 
+        text-align: center;">
+        <b>Marcas</b>
+    </div>
+    <div style="padding-top: 10px; padding-right: 8px; padding-left: 8px; border-style: solid;
+        border-width: 1px; border-color: rgb(130, 81, 177);">
+        @(Html.DevExtreme().List()
+            .ID("filtroMarcasList")
+            .Height(300)
+            .ShowSelectionControls(true)
+            .SelectionMode(ListSelectionMode.All)
+            .SelectByClick(false)
+            .SearchEnabled(true)
+            .SearchExpr("Descripcion")
+            .SearchMode(CollectionSearchMode.Contains)
+            .DataSource(Model, "Id")
+            .ItemTemplate(@<text><%- Descripcion %></text>)
+            @* .OnSelectionChanged("") *@
+            )
+    </div>  
+</div>

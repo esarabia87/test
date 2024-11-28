@@ -1,0 +1,20 @@
+﻿@model CotizacionesViewModel
+
+<section class="services" style="padding-top:170px">
+    <div class="container" data-aos="fade-up">
+        <div class="section-title" style="padding-bottom: 10px;">
+            <h2>Genera tu cotización</h2>
+        </div>
+    </div>
+    <div class="row" data-aos="fade-up">
+        <div class="col-12">
+            <div class="d-flex flex-row">
+                <!-- FILTROS -->
+                <div class="d-flex flex-column" style="max-width: 300px;">
+                    <partial name="~/Views/Cotizaciones/_FiltroMarcas.cshtml" for="FiltroMarcas" />
+                    <partial name="~/Views/Cotizaciones/_FiltroCategorias.cshtml" for="FiltroCategorias" />
+                </div>
+            </div>
+        </div>      
+    </div>
+</section>
